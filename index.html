@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expenditure Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="https://www.videvo.net/videvo_files/converted/2016_05/preview/160421_012_Traffic_1080p.mp420400.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Main Container -->
+  <div class="container">
+    <h1>💸 Pocket Money Tracker</h1>
+
+    <!-- Pocket Money Card -->
+    <div class="card">
+      <h2>💰 Add Pocket Money</h2>
+      <input type="number" id="pocketMoney" placeholder="Enter amount" />
+      <button onclick="addMoney()">Add Money</button>
+    </div>
+
+    <!-- Expense Card -->
+    <div class="card">
+      <h2>🧾 Add an Expense</h2>
+      <input type="text" id="expenseName" placeholder="Expense Name" />
+      <input type="number" id="expenseAmount" placeholder="Amount" />
+      <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <!-- Summary Card -->
+    <div class="card summary-card">
+      <h2>📊 Summary</h2>
+      <p>💵 Total Pocket Money: ₹<span id="totalMoney">0</span></p>
+      <p>🧾 Total Spent: ₹<span id="totalSpent">0</span></p>
+      <p>💼 Leftover: ₹<span id="leftover">0</span></p>
+    </div>
+
+    <!-- History Button -->
+    <button id="historyBtn" onclick="toggleHistory()">📜 Show History</button>
+
+    <!-- History Card -->
+    <div id="history" class="history hidden">
+      <h2>🕓 Expense History</h2>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

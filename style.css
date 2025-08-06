@@ -1,0 +1,149 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Background Video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+/* Main Container */
+.container {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  max-width: 750px;
+  margin: 4% auto;
+  border-radius: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  animation: borderGlow 3s infinite alternate;
+}
+
+/* Glowing Border Animation */
+@keyframes borderGlow {
+  0% {
+    border-color: #00cec9;
+    box-shadow: 0 0 10px #00cec9;
+  }
+  100% {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 20px #6c5ce7;
+  }
+}
+
+/* Reusable Card Container */
+.card {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #00cec9;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 20px rgba(0, 206, 201, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 206, 201, 0.4);
+}
+
+/* Inputs */
+input {
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  width: 80%;
+  max-width: 300px;
+  outline: none;
+  background-color: #ffffffdd;
+  color: #333;
+  font-size: 1rem;
+  transition: box-shadow 0.3s;
+}
+
+input:focus {
+  box-shadow: 0 0 10px #6c5ce7;
+}
+
+/* Buttons */
+button {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  margin: 12px 8px;
+  cursor: pointer;
+  background: linear-gradient(to right, #00cec9, #6c5ce7);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 206, 201, 0.3);
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #6c5ce7, #00cec9);
+  box-shadow: 0 0 15px rgba(108, 92, 231, 0.5);
+}
+
+/* Summary Styling */
+.summary-card p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+/* History Section */
+.history {
+  margin-top: 20px;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  max-height: 250px;
+  overflow-y: auto;
+  border: 2px dashed #6c5ce7;
+  box-shadow: 0 0 15px rgba(108, 92, 231, 0.3);
+}
+
+.history.hidden {
+  display: none;
+}
+
+.history h2 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #ffeaa7;
+}
+
+.history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history li {
+  padding: 10px;
+  border-bottom: 1px dashed #ccc;
+  color: #dfe6e9;
+  font-size: 1rem;
+}
