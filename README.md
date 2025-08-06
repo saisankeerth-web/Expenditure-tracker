@@ -1,0 +1,2 @@
+# Expenditure-tracker
+track expences
